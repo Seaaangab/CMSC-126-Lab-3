@@ -1,6 +1,5 @@
 // function for computing the income tax
 function tax() {
-    removeSeparator(); // removes comma from input
     var monthly_income = parseFloat(document.getElementById("monthly").value); // gets value from textboxes. this line is for the monthly income
     var dependents = parseInt(document.getElementById("dependents").value); // number of dependents. ParseInt because whole number is needed
     var payableTax = 0; // parseFloat is used because there will be decimals involved
@@ -65,7 +64,6 @@ function tax() {
     document.getElementById("total_deduction").value = "Php " + numberWithCommas(total_dec.toFixed(2));
     document.getElementById("taxable_income").value = "Php " + numberWithCommas(TaxInc.toFixed(2));
     document.getElementById("payable_tax").value = "Php " + numberWithCommas(payableTax.toFixed(2));
-    showSeparator(); //returns commas to monthly income
 }
 
 // function that restricts input in textbox. Only postive numbers and 0 are allowed
@@ -89,32 +87,4 @@ function empty() {
 //function that auto separates thousands with comma
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
-//the following 3 functions are used to auto format the input:
-function thousandSeparator(n, sep) { // function that adds comma
-    var sRegExp = new RegExp('(-?[0-9]+)([0-9]{3})'),
-        sValue = n + '';
-
-    if (sep == undefined) {
-        sep = ',';
-    }
-
-    while (sRegExp.test(sValue)) {
-        sValue = sValue.replace(sRegExp, '$1' + sep + '$2');
-    }
-
-    return sValue;
-}
-
-function showSeparator() { //calls the function thousandSeparator when textbox is not selected
-    var myValue = document.getElementById("monthly").value;
-    myValue = thousandSeparator(myValue.replace(/,/g, ""), ',');
-    document.getElementById("monthly").value = myValue;
-}
-
-function removeSeparator() { // removes comma when textbox is selected
-    var myValue = document.getElementById("monthly").value;
-    myValue = myValue.replace(',', '');
-    document.getElementById("monthly").value = myValue;
 }
