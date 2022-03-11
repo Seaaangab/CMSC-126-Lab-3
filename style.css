@@ -1,0 +1,124 @@
+body {
+    background: #7B1113;
+    margin: 0
+}
+
+.form {
+    width: 70vh;
+    height: 84vh;
+    background: #e6e6e6;
+    border-radius: 14px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(32vh - 220px) auto;
+    padding: 22px 23px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.form h2 {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    color: #78788c;
+    border-bottom: 3px solid #78788c;
+}
+
+.form input {
+    width: 100%;
+    padding: 9px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 2px solid #bebed2;
+}
+
+.monthly_before {
+    margin-bottom: -22px;
+    margin-top: 33px;
+}
+
+.monthly {
+    width: 100%;
+    padding: 11px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 2px solid #bebed2;
+    text-indent: 37px;
+}
+
+.info {
+    font-size: 12px;
+    margin-bottom: -22px;
+    margin-top: -14px;
+    color: #808080;
+}
+
+.form input:focus {
+    border-bottom: 2px solid #78788c
+}
+
+.form p:before {
+    content: attr(type);
+    display: block;
+    margin: 26px 0px 0px 0px;
+    font-size: 14px;
+    color: #000;
+}
+
+.form h6 {
+    font-size: 14px;
+    margin-inline-start: 12px;
+    margin-block-end: -26px;
+    padding: 1px;
+}
+
+.form button {
+    float: right;
+    padding: 5px 12px;
+    margin: 0px 8px 0;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background: #78788c;
+    color: #fff
+}
+
+.footer {
+    /* position: absolute; */
+    /* bottom: -12px; */
+    /* right: 50%; */
+    display: flex;
+    background: #50505a;
+    color: #fff;
+    /* width: 50%; */
+    /* height: 33px; */
+    /* padding: 16px 4px 16px 0; */
+    border-radius: 34px;
+    font-size: 18px;
+    box-shadow: 10px 10px 40px -14px #000;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.checkbox {
+    width: 582px;
+    margin-top: -32px;
+}
