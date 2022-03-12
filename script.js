@@ -36,7 +36,7 @@ function tax() {
     var TaxInc = parseFloat(grossIncome - total_dec);
 
     // I applied the range in the table given
-    if (TaxInc <= 250000) { // if tax income is less than 250,000, payable tax will be 0. The others are included with the conditions stated in the table.
+    if (TaxInc > 1 && TaxInc <= 250000) { // if tax income is less than 250,000, payable tax will be 0. The others are included with the conditions stated in the table.
         payableTax = 0;
     }
 
@@ -81,6 +81,10 @@ function empty() {
     document.getElementById("monthly").value = "";
     document.getElementById("dependents").value = "";
     document.getElementById("GovCheck").checked = false;
+    document.getElementById("gross_income").value = "Php 0.00 ";
+    document.getElementById("total_deduction").value = "Php 0.00 ";
+    document.getElementById("taxable_income").value = "Php 0.00 ";
+    document.getElementById("payable_tax").value = "Php 0.00 ";
 }
 
 
