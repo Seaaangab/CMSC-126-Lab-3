@@ -19,7 +19,7 @@ function tax() {
 
     var pagibig = parseFloat((monthly_income * 0.01375) * 12); //for pagibig deduction (1.375% per month)
     var philhealth = parseFloat((monthly_income * 0.035) * 12); //for philhealth deduction (3.5%% per month)
-    var personal = 50000; // for personal exemption
+    var personal = 250000; // for personal exemption
 
     if (dependents > 4) { // if dependents are greater than 4, APE is immidiately 200000
         dep_exemp = 200000;
